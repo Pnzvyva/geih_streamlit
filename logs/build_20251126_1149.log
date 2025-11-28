@@ -1,0 +1,31 @@
+=================================================
+   CREACIÓN DE BASE DE DATOS GEIH (DuckDB)
+=================================================
+
+Conectando a data/geih.duckdb...
+
+
+==============================
+Procesando año 2007
+==============================
+
+→ Tabla: caracteristicas_2007_cabecera
+   Categoría: caracteristicas
+   Tipo: cabecera
+   Filas: 566251
+   Columnas: 84
+ERROR INSERTANDO: Catalog Error: Column with name DIRECTORIO already exists!
+
+→ Tabla: caracteristicas_2007_resto
+   Categoría: caracteristicas
+   Tipo: resto
+   Filas: 64459
+   Columnas: 82
+ERROR INSERTANDO: Catalog Error: Column with name DIRECTORIO already exists!
+
+→ Tabla: hogar_2007_cabecera
+   Categoría: hogar
+   Tipo: cabecera
+   Filas: 199643
+   Columnas: 96
+ERROR INSERTANDO: Catalog Error: Column with name DIRECTORIO already exists!

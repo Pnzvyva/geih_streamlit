@@ -1,0 +1,58 @@
+=================================================
+   CREACIÓN DE BASE DE DATOS GEIH (DuckDB)
+=================================================
+
+Conectando a data/geih.duckdb...
+
+
+==============================
+Procesando año 2007
+==============================
+
+→ Tabla: caracteristicas_2007_cabecera
+   Categoría: caracteristicas
+   Tipo: cabecera
+   Filas: 566251
+   Columnas: 84
+   Columnas con las que se crea la tabla: ['Directorio', 'Secuencia_p', 'Orden', 'Regis', 'P6016', 'P6020', 'P6030', 'P6030s1', 'P6030s3', 'P6040', 'P6050', 'P6080', 'P6080s1', 'P6060', 'P6060s1', 'P6070', 'P6090', 'P6140', 'P6150', 'P6100', 'P6110', 'P6120', 'P6125', 'P6160', 'P6170', 'P6175', 'P6180', 'P6180s1', 'P6180s2', 'P6190', 'P6190s1', 'P6200', 'P6200s1', 'P6210', 'P6210s1', 'P6220', 'Clase', 'Dpto', 'Area', 'Fex_c_2011', 'P7800', 'P7810', 'P7820', 'P7820s1', 'P7820s2', 'P7820s3', 'P7820s4', 'P7820s5', 'P7820s6', 'P7820s7', 'P7830', 'P7830s1', 'P7830s2', 'P7830s3', 'P7830s4', 'P7830s5', 'P7830s6', 'P7830s7', 'P7840', 'P7840s1', 'P7840s2', 'P7840s3', 'P7840s4', 'P7830S8', 'DIRECTORIO', 'SECUENCIA_P', 'ORDEN', 'REGIS', 'P6030S1', 'P6030S3', 'P6080S1', 'P6060S1', 'P6180S1', 'P6180S2', 'P6190S1', 'P6200S1', 'P6210S1', 'CLASE', 'DPTO', 'AREA', 'fex_c_2011', 'ano', 'categoria', 'tipo']
+❌ ERROR INSERTANDO: Catalog Error: Column with name DIRECTORIO already exists!
+
+→ Tabla: caracteristicas_2007_resto
+   Categoría: caracteristicas
+   Tipo: resto
+   Filas: 64459
+   Columnas: 82
+   Columnas con las que se crea la tabla: ['Directorio', 'Secuencia_p', 'Orden', 'Regis', 'P6016', 'P6020', 'P6030', 'P6030s1', 'P6030s3', 'P6040', 'P6050', 'P6080', 'P6080s1', 'P6060', 'P6060s1', 'P6070', 'P6090', 'P6140', 'P6150', 'P6100', 'P6110', 'P6120', 'P6125', 'P6160', 'P6170', 'P6175', 'P6180', 'P6180s1', 'P6180s2', 'P6190', 'P6190s1', 'P6200', 'P6200s1', 'P6210', 'P6210s1', 'P6220', 'Clase', 'Dpto', 'Fex_c_2011', 'P7800', 'P7810', 'P7820', 'P7820s1', 'P7820s2', 'P7820s3', 'P7820s4', 'P7820s5', 'P7820s6', 'P7820s7', 'P7830', 'P7830s1', 'P7830s2', 'P7830s3', 'P7830s4', 'P7830s5', 'P7830s6', 'P7830s7', 'P7840', 'P7840s1', 'P7840s2', 'P7840s3', 'P7840s4', 'P7830S8', 'DIRECTORIO', 'SECUENCIA_P', 'ORDEN', 'REGIS', 'P6030S1', 'P6030S3', 'P6080S1', 'P6060S1', 'P6180S1', 'P6180S2', 'P6190S1', 'P6200S1', 'P6210S1', 'CLASE', 'DPTO', 'fex_c_2011', 'ano', 'categoria', 'tipo']
+❌ ERROR INSERTANDO: Catalog Error: Column with name DIRECTORIO already exists!
+
+→ Tabla: hogar_2007_cabecera
+   Categoría: hogar
+   Tipo: cabecera
+   Filas: 199643
+   Columnas: 96
+   Columnas con las que se crea la tabla: ['Directorio', 'Secuencia_p', 'P5000', 'P5010', 'P5020', 'P5030', 'P5040', 'P5050', 'P5070', 'P5080', 'P5090', 'P5090s1', 'P5100', 'P5110', 'P5130', 'P5140', 'P5210s1', 'P5210s2', 'P5210s3', 'P5210s4', 'P5210s5', 'P5210s6', 'P5210s7', 'P5210s8', 'P5210s9', 'P5210s10', 'P5210s11', 'P5210s14', 'P5210s15', 'P5210s16', 'P5210s17', 'P5210s18', 'P5210s19', 'P5210s20', 'P5210s21', 'P5210s22', 'P5210s24', 'Hogar', 'P4000', 'P4010', 'P4020', 'P4030s1', 'P4030s2', 'P4030s3', 'P4030s4', 'P4030s5', 'P4030s1a1', 'P4030s4a1', 'P4040', 'Regis', 'Clase', 'Dpto', 'Orden', 'Area', 'Fex_c_2011', 'DIRECTORIO', 'SECUENCIA_P', 'P5090S1', 'P5210S1', 'P5210S2', 'P5210S3', 'P5210S4', 'P5210S5', 'P5210S6', 'P5210S7', 'P5210S8', 'P5210S9', 'P5210S10', 'P5210S11', 'P5210S14', 'P5210S15', 'P5210S16', 'P5210S17', 'P5210S18', 'P5210S19', 'P5210S20', 'P5210S21', 'P5210S22', 'P5210S24', 'HOGAR', 'P4030S1', 'P4030S2', 'P4030S3', 'P4030S4', 'P4030S5', 'P4030S1A1', 'P4030S4A1', 'REGIS', 'CLASE', 'DPTO', 'ORDEN', 'AREA', 'fex_c_2011', 'ano', 'categoria', 'tipo']
+❌ ERROR INSERTANDO: Catalog Error: Column with name DIRECTORIO already exists!
+
+→ Tabla: hogar_2007_resto
+   Categoría: hogar
+   Tipo: resto
+   Filas: 20335
+   Columnas: 94
+   Columnas con las que se crea la tabla: ['Directorio', 'Secuencia_p', 'P5000', 'P5010', 'P5020', 'P5030', 'P5040', 'P5050', 'P5070', 'P5080', 'P5090', 'P5090s1', 'P5100', 'P5110', 'P5130', 'P5140', 'P5210s1', 'P5210s2', 'P5210s3', 'P5210s4', 'P5210s5', 'P5210s6', 'P5210s7', 'P5210s8', 'P5210s9', 'P5210s10', 'P5210s11', 'P5210s14', 'P5210s15', 'P5210s16', 'P5210s17', 'P5210s18', 'P5210s19', 'P5210s20', 'P5210s21', 'P5210s22', 'P5210s24', 'Hogar', 'P4000', 'P4010', 'P4020', 'P4030s1', 'P4030s2', 'P4030s3', 'P4030s4', 'P4030s5', 'P4030s1a1', 'P4030s4a1', 'P4040', 'Regis', 'Clase', 'Dpto', 'Orden', 'Fex_c_2011', 'DIRECTORIO', 'SECUENCIA_P', 'P5090S1', 'P5210S1', 'P5210S2', 'P5210S3', 'P5210S4', 'P5210S5', 'P5210S6', 'P5210S7', 'P5210S8', 'P5210S9', 'P5210S10', 'P5210S11', 'P5210S14', 'P5210S15', 'P5210S16', 'P5210S17', 'P5210S18', 'P5210S19', 'P5210S20', 'P5210S21', 'P5210S22', 'P5210S24', 'HOGAR', 'P4030S1', 'P4030S2', 'P4030S3', 'P4030S4', 'P4030S5', 'P4030S1A1', 'P4030S4A1', 'REGIS', 'CLASE', 'DPTO', 'ORDEN', 'fex_c_2011', 'ano', 'categoria', 'tipo']
+❌ ERROR INSERTANDO: Catalog Error: Column with name DIRECTORIO already exists!
+
+→ Tabla: fuerza_trabajo_2007_cabecera
+   Categoría: fuerza_trabajo
+   Tipo: cabecera
+   Filas: 590150
+   Columnas: 39
+   Columnas con las que se crea la tabla: ['Directorio', 'Secuencia_p', 'Orden', 'Regis', 'P6230', 'P6240', 'P6240s1', 'P6250', 'P6260', 'P6270', 'P6280', 'P6290', 'P6290s1', 'P6300', 'P6310', 'P6310s1', 'P6320', 'P6330', 'P6340', 'P6350', 'P6351', 'Clase', 'Dpto', 'Area', 'Fex_c_2011', 'DIRECTORIO', 'SECUENCIA_P', 'ORDEN', 'REGIS', 'P6240S1', 'P6290S1', 'P6310S1', 'CLASE', 'DPTO', 'AREA', 'fex_c_2011', 'ano', 'categoria', 'tipo']
+❌ ERROR INSERTANDO: Catalog Error: Column with name DIRECTORIO already exists!
+
+→ Tabla: fuerza_trabajo_2007_resto
+   Categoría: fuerza_trabajo
+   Tipo: resto
+   Filas: 62986
+   Columnas: 37
+   Columnas con las que se crea la tabla: ['Directorio', 'Secuencia_p', 'Orden', 'Regis', 'P6230', 'P6240', 'P6240s1', 'P6250', 'P6260', 'P6270', 'P6280', 'P6290', 'P6290s1', 'P6300', 'P6310', 'P6310s1', 'P6320', 'P6330', 'P6340', 'P6350', 'P6351', 'Clase', 'Dpto', 'Fex_c_2011', 'DIRECTORIO', 'SECUENCIA_P', 'ORDEN', 'REGIS', 'P6240S1', 'P6290S1', 'P6310S1', 'CLASE', 'DPTO', 'fex_c_2011', 'ano', 'categoria', 'tipo']
+❌ ERROR INSERTANDO: Catalog Error: Column with name DIRECTORIO already exists!

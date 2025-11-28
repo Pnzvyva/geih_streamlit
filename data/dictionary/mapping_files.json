@@ -1,0 +1,59 @@
+{
+    "categorias": [
+        "caracteristicas",
+        "hogar",
+        "fuerza_trabajo",
+        "ocupados",
+        "no_ocupados",
+        "inactivos",
+        "migracion",
+        "otras_actividades",
+        "otros_ingresos"
+    ],
+
+    "2007_2021": {
+        "caracteristicas": [
+            "Caracteristicas_Cabecera_Anual.csv",
+            "Caracteristicas_Resto_Anual.csv"
+        ],
+        "hogar": [
+            "Hogar_Cabecera_Anual.csv",
+            "Hogar_Resto_Anual.csv"
+        ],
+        "fuerza_trabajo": [
+            "FuerzaTrabajo_Cabecera_Anual.csv",
+            "FuerzaTrabajo_Resto_Anual.csv"
+        ],
+        "ocupados": [
+            "Ocupados_Cabecera_Anual.csv",
+            "Ocupados_Resto_Anual.csv"
+        ],
+        "no_ocupados": [
+            "Desocupados_Cabecera_Anual.csv",
+            "Desocupados_Resto_Anual.csv"
+        ],
+        "inactivos": [
+            "Inactivos_Cabecera_Anual.csv",
+            "Inactivos_Resto_Anual.csv"
+        ],
+        "otras_actividades": [
+            "Otras_Actividades_Cabecera_Anual.csv",
+            "Otras_Actividades_Resto_Anual.csv"
+        ],
+        "otros_ingresos": [
+            "Otros_Ingresos_Cabecera_Anual.csv",
+            "Otros_Ingresos_Resto_Anual.csv"
+        ]
+    },
+
+    "2022_2025": {
+        "caracteristicas": "Caracteristicas_generales_seguridad_social_en_salud_y_educacion_Anual.csv",
+        "hogar": "Datos_del_hogar_y_la_vivienda_Anual.csv",
+        "fuerza_trabajo": "Fuerza_de_trabajo_Anual.csv",
+        "ocupados": "Ocupados_Anual.csv",
+        "no_ocupados": "No_ocupados_Anual.csv",
+        "migracion": "Migracion_Anual.csv",
+        "otras_actividades": "Otras_formas_de_trabajo_Anual.csv",
+        "otros_ingresos": "Otros_ingresos_e_impuestos_Anual.csv"
+    }
+}
