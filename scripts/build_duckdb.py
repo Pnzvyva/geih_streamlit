@@ -79,7 +79,7 @@ for year in YEARS:
     for categoria, tipo, table_name, df in iter_year_data(year):
 
         # ============================================
-        # 🔥 PASO CRÍTICO: GARANTIZAR COLUMNAS ÚNICAS
+        # PASO CRÍTICO: GARANTIZAR COLUMNAS ÚNICAS
         # ============================================
         df = df.copy()
 

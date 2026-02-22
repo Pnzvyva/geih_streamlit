@@ -329,6 +329,3 @@ def iter_year_data(year: int):
             df = ensure_unique_columns(df)    # renombrado aquí sí o sí
             table_name = make_table_name(categoria, year, tipo)
             yield categoria, tipo, table_name, df
-
-
-
