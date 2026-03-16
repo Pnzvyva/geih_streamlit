@@ -2,9 +2,21 @@ import streamlit as st
 import duckdb
 import pandas as pd
 from scripts.db_metadata import get_available_categories_and_types
+from scripts.ensure_duckdb import ensure_duckdb_exists
 import base64
+import os
 
 DB_PATH = "data/geih.duckdb"
+
+# Descargar base de datos desde R2 si no existe (solo al inicio)
+@st.cache_resource
+def init_database():
+    """Inicializa la base de datos descargandola desde R2 si es necesario."""
+    ensure_duckdb_exists()
+    return True
+
+# Inicializar
+init_database()
 
 st.set_page_config(page_title="Explorador GEIH", layout="wide")
 

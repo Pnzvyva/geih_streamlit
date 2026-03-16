@@ -1,0 +1,4 @@
+# Configuración para Hugging Face Spaces
+# Este archivo configura el Space para usar Streamlit
+
+streamlit
