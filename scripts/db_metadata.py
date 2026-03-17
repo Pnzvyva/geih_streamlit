@@ -2,8 +2,6 @@ import duckdb
 
 DB_PATH = "data/geih.duckdb"
 
-con = duckdb.connect(DB_PATH)
-
 CATEGORIES = [
     "caracteristicas",
     "hogar",
@@ -18,6 +16,7 @@ CATEGORIES = [
 
 
 def list_tables():
+    con = duckdb.connect(DB_PATH)
     return [t[0] for t in con.execute("SHOW TABLES").fetchall()]
 
 
@@ -26,7 +25,8 @@ def get_available_categories_and_types(year: int):
     Detecta categorías y tipos EXISTENTES dentro de DuckDB.
     Incluye excepción: 2020 usa formato TOTAL igual que 2022+.
     """
-    tablas = list_tables()
+    con = duckdb.connect(DB_PATH)
+    tablas = [t[0] for t in con.execute("SHOW TABLES").fetchall()]
     disponibles = []
 
     for cat in CATEGORIES:

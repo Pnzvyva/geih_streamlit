@@ -1,22 +1,13 @@
 import streamlit as st
 import duckdb
 import pandas as pd
-from scripts.db_metadata import get_available_categories_and_types
-from scripts.ensure_duckdb import ensure_duckdb_exists
+from scripts.r2_connector import (
+    get_r2_connection,
+    create_table_view,
+    get_available_categories_and_types_from_r2
+)
 import base64
 import os
-
-DB_PATH = "data/geih.duckdb"
-
-# Descargar base de datos desde R2 si no existe (solo al inicio)
-@st.cache_resource
-def init_database():
-    """Inicializa la base de datos descargandola desde R2 si es necesario."""
-    ensure_duckdb_exists()
-    return True
-
-# Inicializar
-init_database()
 
 st.set_page_config(page_title="Explorador GEIH", layout="wide")
 
@@ -38,8 +29,8 @@ logo_base64 = load_logo_base64(LOGO_PATH)
 st.markdown(
     f"""
     <div style="display:flex; align-items:center; gap:16px; margin-bottom:25px;">
-        <img src="data:image/png;base64,{logo_base64}" 
-             alt="logo" 
+        <img src="data:image/png;base64,{logo_base64}"
+             alt="logo"
              style="width:60px; border-radius:8px;" />
         <div>
             <h2 style="margin:0; padding:0;">Explorador GEIH (2007–2025)</h2>
@@ -52,7 +43,18 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.write("Consulta tablas anuales de la GEIH usando DuckDB.")
+st.write("Consulta tablas anuales de la GEIH usando DuckDB + R2.")
+
+# ====================================
+# CONEXIÓN A R2
+# ====================================
+
+@st.cache_resource
+def init_r2_connection():
+    """Inicializa la conexión a R2."""
+    return get_r2_connection()
+
+con = init_r2_connection()
 
 # ====================================
 # SELECTOR DE AÑO – SOLO AÑOS
@@ -61,8 +63,8 @@ YEARS = list(range(2007, 2026))
 
 year = st.selectbox("Selecciona un año:", YEARS)
 
-# Obtener categorías válidas para ese año
-available = get_available_categories_and_types(year)
+# Obtener categorías válidas para ese año desde R2
+available = get_available_categories_and_types_from_r2(con, year)
 
 if not available:
     st.error("Este año no tiene datos disponibles.")
@@ -93,9 +95,12 @@ st.markdown(f"### 📁 Tabla seleccionada: `{table_name}`")
 # ====================================
 # CONSULTA SQL
 # ====================================
-con = duckdb.connect(DB_PATH)
 
 try:
+    # Crear vista que apunta al archivo parquet en R2
+    create_table_view(con, categoria, year, tipo)
+
+    # Consultar datos
     df = con.execute(f"SELECT * FROM {table_name} LIMIT 5000").df()
     st.dataframe(df, use_container_width=True)
 
@@ -110,8 +115,8 @@ st.markdown("---")
 st.subheader("Consulta SQL avanzada (opcional)")
 
 with st.expander("Abrir consulta SQL"):
-    
-    st.write("Puedes ejecutar consultas SQL directamente sobre la base de datos DuckDB.")
+
+    st.write("Puedes ejecutar consultas SQL directamente sobre los datos en R2.")
     st.write("Ejemplo:")
     st.code(f"SELECT COUNT(*) FROM {table_name}")
 
